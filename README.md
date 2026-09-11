@@ -36,6 +36,32 @@ Known placeholders pending real assets from the client:
 - Sponsor logos are rendered as text wordmarks pending real logo files.
 - Social links in the footer point to `#` pending real profile URLs.
 
+## Pulling assets from the old site
+
+The old azeventsgroup.com is a WordPress site behind Cloudflare — a bare
+`curl`/headless-browser request gets blocked, but a plain HTTPS request with
+normal browser headers goes through fine.
+
+```bash
+npm run scrape:assets
+```
+
+Fetches the old site's key pages, finds every image referenced (`<img>`,
+`srcset`, lazy-load attributes, CSS `background-image`), and downloads them
+to `.legacy-assets/` (gitignored — a review staging area, not source of
+truth) along with a `manifest.json` noting which page each image came from.
+Confirmed working: it pulls the real "Enjoy Life" logo, all the sponsor
+logos, and the event photography. A few files are stock (Pexels) images the
+old site used as filler, not AEG's own photography — check before reusing.
+
+Review what's in `.legacy-assets/`, then manually move the ones you want
+into `public/images/` with sensible names and wire them into the
+components that currently use type/gradient placeholders (search the repo
+for "No logo image file" and "No event photography" comments).
+
+Options: `--pages /,/about/` to limit which pages it crawls, `--out <dir>`
+for a different output location, `--base <url>` for a different site.
+
 ## Forms
 
 Contact page (Phase 2) will use Netlify Forms — no backend/database needed.

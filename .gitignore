@@ -39,6 +39,10 @@ yarn-error.log*
 # netlify
 .netlify
 
+# scraped assets staging area (scripts/scrape-legacy-assets.mjs) —
+# review and move finalists into public/images/, don't commit the raw dump
+/.legacy-assets
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
