@@ -1,22 +1,30 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { HeroReveal } from "@/components/motion/reveal";
 
-// No hero photography was supplied to this build — the radial rays below are
-// a brand-derived stand-in (echoes the logo's sunburst without reproducing
-// the AZ flag) so the layout works today. Swap the <div> background for a
-// full-bleed <Image> of a real AEG event once photos are provided.
+// Photo pulled from the old site (a balloon-glow shot, no photographer
+// watermark) via scripts/scrape-legacy-assets.mjs — swap for a different
+// AEG event photo any time via public/images/events/hero-balloon-glow.jpg.
 export function Hero() {
   return (
     <section className="bg-navy relative flex min-h-[88vh] items-center overflow-hidden text-white">
-      <div
-        aria-hidden
-        className="absolute inset-0 [background:radial-gradient(circle_at_85%_15%,rgba(248,165,67,0.35),transparent_45%),radial-gradient(circle_at_15%_85%,rgba(206,113,52,0.3),transparent_50%),linear-gradient(160deg,#02224A_0%,#031a38_55%,#02122a_100%)]"
+      <Image
+        src="/images/events/hero-balloon-glow.jpg"
+        alt="Illuminated hot air balloons glowing at dusk during an AEG-produced balloon festival"
+        fill
+        priority
+        className="object-cover"
+        sizes="100vw"
       />
       <div
         aria-hidden
-        className="absolute inset-0 [background-image:repeating-conic-gradient(from_0deg,#F8A543_0deg_1deg,transparent_1deg_9deg)] [background-size:900px_900px] [background-position:88%_18%] opacity-[0.07]"
+        className="absolute inset-0 bg-gradient-to-t from-[#02122a] via-[#02122a]/70 to-[#02122a]/20"
+      />
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-gradient-to-r from-[#02122a]/90 via-[#02122a]/20 to-transparent"
       />
 
       <div className="relative mx-auto w-full max-w-7xl px-4 py-28 sm:px-6 lg:px-8">

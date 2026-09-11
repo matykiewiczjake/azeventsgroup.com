@@ -19,7 +19,7 @@ export function SiteHeader() {
   return (
     <header className="bg-navy sticky top-0 z-50 text-white">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:h-20 lg:px-8">
-        <Logo />
+        <Logo priority />
 
         <nav className="hidden items-center gap-8 lg:flex">
           {navLinks.map((link) => (

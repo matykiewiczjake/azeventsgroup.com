@@ -1,12 +1,13 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, MapPin } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { events } from "@/lib/content/home";
 
-// Cards use brand-color gradients in place of real event photography, which
-// wasn't supplied to this build. Swap each gradient <div> for a full-bleed
-// <Image> of the real event once photos are available — the card structure
-// (aspect ratio, overlay, hover treatment) is already built for it.
+// ASBA Gala, Cars & Cigars, and CCU Glow still use brand-color gradients —
+// no confidently-matched, rights-clear photo for those three was found on
+// the old site. See README "Pulling assets from the old site" for how to
+// pull more and swap them in.
 export function EventsGrid() {
   return (
     <section id="events" className="bg-white py-20 sm:py-28">
@@ -26,10 +27,21 @@ export function EventsGrid() {
           {events.map((event, i) => (
             <Reveal key={event.name} delay={(i % 3) * 0.08}>
               <div className="group relative aspect-[4/5] overflow-hidden rounded-lg">
-                <div
-                  aria-hidden
-                  className={`absolute inset-0 bg-gradient-to-br ${event.gradient} transition-transform duration-500 group-hover:scale-105`}
-                />
+                {event.image ? (
+                  <Image
+                    src={event.image}
+                    alt={`${event.name} in ${event.location}`}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    style={{ objectPosition: event.imagePosition }}
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  />
+                ) : (
+                  <div
+                    aria-hidden
+                    className={`absolute inset-0 bg-gradient-to-br ${event.gradient} transition-transform duration-500 group-hover:scale-105`}
+                  />
+                )}
                 <div
                   aria-hidden
                   className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"
@@ -58,6 +70,12 @@ export function EventsGrid() {
                     </Link>
                   )}
                 </div>
+
+                {event.imageIsStock && (
+                  <span className="absolute top-3 right-3 rounded-full bg-black/50 px-2 py-1 text-[10px] font-medium tracking-wide text-white/90 backdrop-blur-sm">
+                    Stock photo — replace
+                  </span>
+                )}
               </div>
             </Reveal>
           ))}

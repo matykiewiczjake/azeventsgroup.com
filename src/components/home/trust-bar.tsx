@@ -1,9 +1,7 @@
-import { Tv } from "lucide-react";
+import Image from "next/image";
 import { Reveal } from "@/components/motion/reveal";
 import { trustLogos } from "@/lib/content/home";
 
-// Sponsor wordmarks stand in for real logo files, which weren't supplied to
-// this build. Swap each span for the brand's SVG/PNG mark when available.
 export function TrustBar() {
   return (
     <section className="border-navy/10 border-b bg-white py-10">
@@ -13,18 +11,31 @@ export function TrustBar() {
             <p className="text-muted-foreground text-xs font-medium tracking-[0.2em]">
               TRUSTED BY BRANDS ACROSS THE VALLEY
             </p>
-            <div className="flex w-full flex-wrap items-center justify-center gap-x-10 gap-y-4 overflow-x-auto">
-              {trustLogos.map((name) => (
-                <span
-                  key={name}
-                  className="font-display text-navy/40 shrink-0 text-sm tracking-wide sm:text-base"
+            <div className="flex w-full flex-wrap items-center justify-center gap-x-8 gap-y-6">
+              {trustLogos.map((logo) => (
+                <div
+                  key={logo.name}
+                  className="relative h-8 shrink-0 grayscale transition-all duration-200 hover:grayscale-0"
+                  style={{ width: logo.width }}
                 >
-                  {name.toUpperCase()}
-                </span>
+                  <Image
+                    src={logo.src}
+                    alt={logo.name}
+                    fill
+                    className="object-contain"
+                    sizes="150px"
+                  />
+                </div>
               ))}
             </div>
-            <div className="border-copper/30 bg-copper/5 flex items-center gap-2 rounded-full border px-4 py-2">
-              <Tv className="text-copper size-4" />
+            <div className="border-copper/30 bg-copper/5 flex items-center gap-2 rounded-full border py-1.5 pr-4 pl-1.5">
+              <Image
+                src="/images/gma-badge.png"
+                alt="As seen on ABC's Good Morning America"
+                width={28}
+                height={28}
+                className="rounded-full"
+              />
               <span className="text-navy text-sm font-medium">
                 As Seen on ABC&apos;s Good Morning America
               </span>
