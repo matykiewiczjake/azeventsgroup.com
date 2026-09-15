@@ -77,7 +77,7 @@ export const trustLogos: SponsorLogo[] = [
 export const pillars = [
   {
     title: "Experience, Tested",
-    body: "35+ years and 250+ live events — from large sporting events to one-of-a-kind productions.",
+    body: "40+ years and 250+ live events — from large sporting events to one-of-a-kind productions.",
   },
   {
     title: "Ownership Mentality",

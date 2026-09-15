@@ -100,7 +100,6 @@ export default function ServicesPage() {
 
         <FinalCta
           heading="READY TO GET STARTED?"
-          subtext="Tell us what you're planning and we'll show you how 35+ years of experience goes to work for you."
           buttonLabel="Request a Consultation"
         />
       </main>

@@ -31,7 +31,7 @@ export function Hero() {
         <div className="max-w-3xl">
           <HeroReveal>
             <p className="font-display text-brand-gold text-sm tracking-[0.2em] sm:text-base">
-              35+ YEARS &middot; 250+ EVENTS &middot; ONE FAMILY
+              40+ YEARS &middot; 250+ EVENTS &middot; ONE FAMILY
             </p>
           </HeroReveal>
 
@@ -44,7 +44,7 @@ export function Hero() {
           <HeroReveal delay={0.2}>
             <p className="mt-6 max-w-xl text-lg text-white/85">
               We don&apos;t just staff events — we&apos;ve built and run our own
-              for over three decades. From the Arizona Balloon Classic to
+              for over 40 years. From the Arizona Balloon Classic to
               corporate galas, AEG brings an operator&apos;s instinct to every
               event we touch.
             </p>

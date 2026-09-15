@@ -12,7 +12,7 @@ type FinalCtaProps = {
 
 export function FinalCta({
   heading = "READY TO PLAN YOUR EVENT?",
-  subtext = "Tell us what you're planning and we'll show you how 35+ years of experience goes to work for you.",
+  subtext = "Tell us what you're planning and we'll show you how 40+ years of experience goes to work for you.",
   buttonLabel = "Get In Touch",
   href = "/contact",
 }: FinalCtaProps) {

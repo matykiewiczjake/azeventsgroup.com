@@ -74,10 +74,7 @@ export default function AboutPage() {
 
         <Testimonial />
 
-        <FinalCta
-          heading="READY TO PLAN YOUR DREAM EVENT?"
-          subtext="Tell us what you're planning and we'll show you how 35+ years of experience goes to work for you."
-        />
+        <FinalCta heading="READY TO PLAN YOUR DREAM EVENT?" />
       </main>
       <SiteFooter />
     </>
