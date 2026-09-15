@@ -1,0 +1,23 @@
+<html>
+  <head></head>
+  <body>
+    <!--
+      Static form-detection target for Netlify Forms. Next.js on Netlify
+      (the OpenNext adapter) no longer produces plain static HTML that
+      Netlify's deploy-time crawler can scan for `data-netlify` forms, so
+      this file exists purely to give it something to detect — real users
+      never see it. The live form in src/components/contact-form.tsx
+      submits here via fetch(). Field names must match that form exactly.
+      See: https://opennext.js.org/netlify/forms
+    -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input name="bot-field" />
+      <input name="name" type="text" />
+      <input name="email" type="email" />
+      <input name="phone" type="tel" />
+      <input name="event-type" type="text" />
+      <textarea name="message"></textarea>
+    </form>
+  </body>
+</html>
