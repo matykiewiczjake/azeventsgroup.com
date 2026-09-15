@@ -18,7 +18,11 @@ export type SponsorLogo = {
 };
 
 export const trustLogos: SponsorLogo[] = [
-  { name: "Krispy Kreme", src: "/images/sponsors/krispy-kreme.png", width: 110 },
+  {
+    name: "Krispy Kreme",
+    src: "/images/sponsors/krispy-kreme.png",
+    width: 110,
+  },
   { name: "Cox Mobile", src: "/images/sponsors/cox-mobile.png", width: 110 },
   { name: "Rusty Ford", src: "/images/sponsors/rusty-ford.png", width: 130 },
   {
@@ -26,20 +30,48 @@ export const trustLogos: SponsorLogo[] = [
     src: "/images/sponsors/agua-caliente-casinos.png",
     width: 150,
   },
-  { name: "Desert Financial", src: "/images/sponsors/desert-financial.png", width: 130 },
-  { name: "Goodyear Ballpark", src: "/images/sponsors/goodyear-ballpark.png", width: 90 },
+  {
+    name: "Desert Financial",
+    src: "/images/sponsors/desert-financial.png",
+    width: 130,
+  },
+  {
+    name: "Goodyear Ballpark",
+    src: "/images/sponsors/goodyear-ballpark.png",
+    width: 90,
+  },
   { name: "Portillo's", src: "/images/sponsors/portillos.png", width: 110 },
   { name: "K-LOVE", src: "/images/sponsors/k-love.webp", width: 100 },
   { name: "Spencer's", src: "/images/sponsors/spencers.jpg", width: 130 },
-  { name: "Karsten's Ace", src: "/images/sponsors/karstens-ace.png", width: 130 },
+  {
+    name: "Karsten's Ace",
+    src: "/images/sponsors/karstens-ace.png",
+    width: 130,
+  },
   { name: "ZenBusiness", src: "/images/sponsors/zenbusiness.webp", width: 130 },
   { name: "CoreCivic", src: "/images/sponsors/corecivic.png", width: 130 },
-  { name: "Navy Federal Credit Union", src: "/images/sponsors/navy-federal.png", width: 90 },
-  { name: "Arizona Rattlers", src: "/images/sponsors/arizona-rattlers.png", width: 150 },
+  {
+    name: "Navy Federal Credit Union",
+    src: "/images/sponsors/navy-federal.png",
+    width: 90,
+  },
+  {
+    name: "Arizona Rattlers",
+    src: "/images/sponsors/arizona-rattlers.png",
+    width: 150,
+  },
   { name: "Brannon EJ", src: "/images/sponsors/brannon-ej.png", width: 130 },
   { name: "RAC", src: "/images/sponsors/rac.png", width: 110 },
-  { name: "La Mesa RV", src: "/images/sponsors/la-mesa-recreation.png", width: 130 },
-  { name: "Arizona Small Business Association", src: "/images/sponsors/asba.jpg", width: 90 },
+  {
+    name: "La Mesa RV",
+    src: "/images/sponsors/la-mesa-recreation.png",
+    width: 130,
+  },
+  {
+    name: "Arizona Small Business Association",
+    src: "/images/sponsors/asba.jpg",
+    width: 90,
+  },
 ];
 
 export const pillars = [

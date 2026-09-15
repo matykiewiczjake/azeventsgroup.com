@@ -77,9 +77,7 @@ export function SiteHeader() {
                 </Link>
               ))}
               <Button
-                render={
-                  <Link href="/contact" onClick={() => setOpen(false)} />
-                }
+                render={<Link href="/contact" onClick={() => setOpen(false)} />}
                 nativeButton={false}
                 className="mt-4 w-full font-medium"
               >
