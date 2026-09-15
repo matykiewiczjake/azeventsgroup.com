@@ -64,7 +64,33 @@ for a different output location, `--base <url>` for a different site.
 
 ## Forms
 
-Contact page (Phase 2) will use Netlify Forms — no backend/database needed.
+The Contact page (`src/components/contact-form.tsx`) posts to Netlify
+Forms — no backend/database needed. Netlify detects the form automatically
+at deploy time (it's real server-rendered HTML with `data-netlify="true"`
+and a `name="contact"` attribute) and stores every submission permanently
+in its own dashboard regardless of anything below — that's the real "never
+lose a lead" guarantee, independent of email deliverability.
+
+Once the site is connected to Netlify, set up in the Netlify dashboard
+(not something committed to this repo — it's account-level config):
+
+1. **Email notification**: Site configuration → Forms → Notifications →
+   Add notification → Email notification → form `contact` → email
+   `info@azeventsgroup.com`. After the first real submission, check that
+   inbox and mark it "not spam" — Netlify's notification emails come from
+   their own domain, not yours, so mail providers sometimes flag the
+   first one.
+2. **Backup to a Google Sheet** (optional, extra redundancy on top of
+   Netlify's own storage): `scripts/netlify-form-to-sheet.gs.js` has the
+   full Apps Script + setup steps — paste it into a Sheet's Apps Script
+   editor, deploy as a web app, and point a Netlify outgoing-webhook
+   notification at the resulting URL. Every submission then appends a row
+   there too, live, independent of email.
+
+Netlify captures every named field on the form automatically (no extra
+config needed for that part) — `name`, `email`, `phone`, `event-type`,
+`message` all show up as columns in Netlify's Forms tab and in the webhook
+payload.
 
 ## Deploy
 
