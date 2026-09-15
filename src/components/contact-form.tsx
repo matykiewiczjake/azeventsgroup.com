@@ -49,7 +49,9 @@ export function ContactForm() {
     });
 
     try {
-      const res = await fetch("/contact", {
+      // Posts to the static detection target (public/__forms.html), not
+      // this page — see that file for why.
+      const res = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encodeForm(data),
@@ -78,6 +80,7 @@ export function ContactForm() {
     <form
       name="contact"
       method="POST"
+      action="/__forms.html"
       data-netlify="true"
       netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
