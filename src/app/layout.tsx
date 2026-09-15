@@ -22,10 +22,35 @@ const yellowtail = Yellowtail({
   display: "swap",
 });
 
+const title = "Arizona Events Group | Live Event Production, Phoenix AZ";
+const description =
+  "Family-run event production company with 40+ years of events and 250+ live events produced — from corporate activations and galas to owned festivals like the Arizona Balloon Classic and Rock n' Roll Car Show.";
+
 export const metadata: Metadata = {
-  title: "Arizona Events Group | Live Event Production, Phoenix AZ",
-  description:
-    "Family-run event production company with 40+ years of events and 250+ live events produced — from corporate activations and galas to owned festivals like the Arizona Balloon Classic and Rock n' Roll Car Show.",
+  metadataBase: new URL("https://azeventsgroup.com"),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: "/",
+    siteName: "Arizona Events Group",
+    images: [
+      {
+        url: "/images/events/hero-balloon-glow.jpg",
+        width: 2000,
+        height: 1334,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/images/events/hero-balloon-glow.jpg"],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
