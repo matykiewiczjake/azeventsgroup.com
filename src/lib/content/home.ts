@@ -134,6 +134,7 @@ export const events: PortfolioEvent[] = [
     location: "Paradise Valley, AZ",
     description: "Arizona Small Business Association's BIG Awards Gala.",
     gradient: "from-[#9D101F] via-[#CE7134] to-[#02224A]",
+    image: "/images/events/asba-gala.jpg",
   },
   {
     name: "Cars & Cigars",
@@ -155,6 +156,7 @@ export const events: PortfolioEvent[] = [
     location: "Lakewood, CO",
     description: "Illuminated hot air balloons lighting up homecoming.",
     gradient: "from-[#02224A] via-[#F8A543] to-[#CE7134]",
+    image: "/images/events/ccu-glow.jpg",
   },
 ];
 
