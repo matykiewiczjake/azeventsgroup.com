@@ -14,8 +14,8 @@ export function Logo({
       <Image
         src="/images/logo.webp"
         alt="Arizona Events Group — Enjoy Life"
-        width={1619}
-        height={972}
+        width={1672}
+        height={941}
         className="h-12 w-auto sm:h-14"
         priority={priority}
       />
