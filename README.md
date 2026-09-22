@@ -62,6 +62,23 @@ for "No logo image file" and "No event photography" comments).
 Options: `--pages /,/about/` to limit which pages it crawls, `--out <dir>`
 for a different output location, `--base <url>` for a different site.
 
+### Removing a white background from a logo/graphic
+
+```bash
+npm run remove-bg -- path/to/input.png path/to/output.webp
+```
+
+Makes flat white (or near-white) background transparent without eating
+white that's actually part of the design — letter counters, a badge's own
+white plaque fill, etc. Naive "every white pixel goes transparent" breaks
+on badge/crest logos because their outline usually isn't a fully sealed
+shape (small stylized notches where a ribbon crosses the border let a
+plain flood fill leak through into the interior); this seals those gaps
+first. See `scripts/remove-white-background.mjs` for details — always
+eyeball the result composited onto a dark background before using it,
+since a plain image viewer shows transparency as white, which looks
+identical to "didn't work."
+
 ## Forms
 
 The Contact page (`src/components/contact-form.tsx`) posts to Netlify
