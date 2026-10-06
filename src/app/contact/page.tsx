@@ -22,6 +22,8 @@ export default function ContactPage() {
           eyebrow="CONTACT"
           title="READY TO BRING YOUR EVENT VISION TO LIFE?"
           subtitle="Have an event or festival you need help producing? Let's chat."
+          image="/images/events/rock-n-roll-car-show.jpg"
+          imagePosition="center 40%"
         />
 
         <section className="bg-white py-20 sm:py-28">

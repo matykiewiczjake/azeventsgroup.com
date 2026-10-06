@@ -43,6 +43,8 @@ export default function ServicesPage() {
           eyebrow="WHAT WE DO"
           title="FULL-SERVICE EVENT PRODUCTION"
           subtitle="Our experienced team delivers tailored event management — logistics, coordination, and execution for events of every scale."
+          image="/images/events/eloy-festival.jpg"
+          imagePosition="center 60%"
         />
 
         <section className="bg-white py-16">

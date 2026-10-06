@@ -22,6 +22,8 @@ export default function AboutPage() {
         <PageHeader
           eyebrow="ABOUT AEG"
           title="GET TO KNOW ARIZONA EVENTS GROUP"
+          image="/images/events/arizona-balloon-classic.jpg"
+          imagePosition="center 70%"
         />
 
         <section className="bg-white py-20 sm:py-28">

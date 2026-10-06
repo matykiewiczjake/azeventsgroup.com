@@ -109,7 +109,7 @@ export type PortfolioEvent = {
 export const events: PortfolioEvent[] = [
   {
     name: "Arizona Balloon Classic",
-    location: "Goodyear, AZ",
+    location: "Chandler, AZ",
     description:
       "Arizona's premier hot air balloon festival — as seen on ABC's Good Morning America.",
     href: "https://abcfest.com",
