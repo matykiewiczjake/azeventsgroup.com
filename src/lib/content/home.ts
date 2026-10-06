@@ -104,9 +104,6 @@ export type PortfolioEvent = {
   // centered, but a couple have the interesting part (signage, subject)
   // off-center.
   imagePosition?: string;
-  // Set when the photo is generic stock standing in for the event, not
-  // confirmed AEG event photography — shown as a small on-card disclosure.
-  imageIsStock?: boolean;
 };
 
 export const events: PortfolioEvent[] = [
@@ -142,6 +139,7 @@ export const events: PortfolioEvent[] = [
     description:
       "Luxury cars, a cigar lounge, live music, fine dining, and a fundraising auction.",
     gradient: "from-[#02224A] via-[#9D101F] to-[#CE7134]",
+    image: "/images/events/cars-and-cigars.jpg",
   },
   {
     name: "The Next Ride",
@@ -149,7 +147,6 @@ export const events: PortfolioEvent[] = [
     description: "A 3-day cycling race drawing 300+ riders.",
     gradient: "from-[#CE7134] via-[#02224A] to-[#02224A]",
     image: "/images/events/the-next-ride.jpg",
-    imageIsStock: true,
   },
   {
     name: "CCU Glow",

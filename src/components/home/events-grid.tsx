@@ -4,10 +4,6 @@ import { ArrowUpRight, MapPin } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { events } from "@/lib/content/home";
 
-// ASBA Gala, Cars & Cigars, and CCU Glow still use brand-color gradients —
-// no confidently-matched, rights-clear photo for those three was found on
-// the old site. See README "Pulling assets from the old site" for how to
-// pull more and swap them in.
 export function EventsGrid() {
   return (
     <section id="events" className="bg-white py-20 sm:py-28">
@@ -70,12 +66,6 @@ export function EventsGrid() {
                     </Link>
                   )}
                 </div>
-
-                {event.imageIsStock && (
-                  <span className="absolute top-3 right-3 rounded-full bg-black/50 px-2 py-1 text-[10px] font-medium tracking-wide text-white/90 backdrop-blur-sm">
-                    Stock photo — replace
-                  </span>
-                )}
               </div>
             </Reveal>
           ))}

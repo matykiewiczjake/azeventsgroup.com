@@ -2,8 +2,8 @@ type NavLink = { label: string; href: string; external?: boolean };
 
 export const navLinks: NavLink[] = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
+  { label: "About", href: "/about" },
   {
     label: "Shop",
     href: "https://hotairballoongiftshop.com",
